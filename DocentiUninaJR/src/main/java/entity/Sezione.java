@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
-import java.util.SortedSet;
+import java.util.*;
 
 public class Sezione {
 
@@ -19,7 +19,7 @@ public class Sezione {
 	private Corso corsoAppartenenza;
 
 	@OneToMany(mappedBy = "sezione")
-	private SortedSet<Materiale> listaMaterialiSezione = new SortedSet<Materiale>() {
+	private SortedSet<Materiale> listaMaterialiSezione = new TreeSet<Materiale>() {//gli override vanno rigenerati
 		@Override
 		public int size() {
 			return 0;
@@ -132,6 +132,7 @@ public class Sezione {
 		supersezione = null;
 		//questo costruttore viene invocato quando creo una sezione principale, quindi setta da solo la supersezione a null
 		//occhio a sto null perchè poi dobbiamo implementare controlli
+		//controllare se TreeSet lo accetta, se è NO cambiare a un valore tipo '0'
 	}
 	public Sezione(String titolo, Sezione supersezione){
 		this.titolo = titolo;
