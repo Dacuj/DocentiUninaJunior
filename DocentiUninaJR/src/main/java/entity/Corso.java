@@ -22,7 +22,7 @@ public class Corso {
 
 	@ManyToMany
 	@JoinTable(name = "STUDENTI_CORSO")
-	public SortedSet<Studente> listaIscritti = new SortedSet<Studente>() {
+	public SortedSet<Studente> listaIscritti = new TreeSet<Studente>() {
 		@Override
 		public Comparator<? super Studente> comparator() {
 			return null;
@@ -84,10 +84,12 @@ public class Corso {
 	};
 	//Set è una Collection che di base non permette duplicati
 	//SortedSet è una estensione di set che inserisce automaticamente gli elementi in ordine ascendente
+	//SortedSet è una interfaccia, non permette di istanziare direttamente oggetti
+	//TreeSet è una specializzazione di SortedSet che non permette nemmeno oggetti null
 	//IntelliJ ha inserito automaticamente tutti gli override per i metodi di questa interfaccia, eliminare se e dove necessario
 
 	@OneToMany(mappedBy = "SEZIONI_CORSO")
-	private SortedSet<Sezione> listaSezioni = new SortedSet<Sezione>() {
+	private SortedSet<Sezione> listaSezioni = new TreeSet<Sezione>() {
 		@Override
 		public Comparator<? super Sezione> comparator() {
 			return null;
