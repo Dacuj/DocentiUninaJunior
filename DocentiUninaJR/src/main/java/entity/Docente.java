@@ -7,7 +7,7 @@ import java.util.*;
 public class Docente extends Utente {
 
 	@OneToMany(mappedBy = "gestore")
-	private SortedSet<Corso> corsiDocente = new SortedSet<Corso>() {
+	private SortedSet<Corso> corsiDocente = new TreeSet<Corso>() {
 		@Override
 		public Comparator<? super Corso> comparator() {
 			return null;
@@ -120,7 +120,13 @@ public class Docente extends Utente {
 
 		throw new UnsupportedOperationException();
 	}
+	public void CreaSez(String titolo, Sezione superSez) {
+		// TODO - implement Docente.CreaSez
+		throw new UnsupportedOperationException();
+	}	
+	//CreaSez è overloaded per permettere la creazione di sezioni principali (se non si fornisce la supersezione) o sottosezioni
 
+	
 	public void IscriviStud() {
 		// TODO - implement Docente.IscriviStud
 		throw new UnsupportedOperationException();
@@ -154,9 +160,6 @@ public class Docente extends Utente {
 	 * @param titolo
 	 * @param superSez
 	 */
-	public void CreaSez(String titolo, Sezione superSez) {
-		// TODO - implement Docente.CreaSez
-		throw new UnsupportedOperationException();
-	}
+
 
 }
