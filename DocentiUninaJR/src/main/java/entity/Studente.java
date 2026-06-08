@@ -2,12 +2,12 @@ package entity;
 import entity.*;
 import jakarta.persistence.ManyToMany;
 
-import java.util.Set;
+import java.util.*;
 
 public class Studente extends Utente {
 
 	@ManyToMany(mappedBy="studenti")
-	private Set<Corso> corsiStudente ;
+	private SortedSet<Corso> corsiStudente = new TreeSet<Corso>() {} ;//far implementare gli override a intellij
 
 	public void IscrivitiaCorso() {
 		// TODO - implement Studente.IscrivitiaCorso
@@ -24,7 +24,7 @@ public class Studente extends Utente {
 		throw new UnsupportedOperationException();
 	}
 
-	public Set<Corso> getCorsiStud(){
+	public SortedSet<Corso> getCorsiStud(){
 		return corsiStudente;
 	}
 }
