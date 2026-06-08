@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.SortedSet;
-
+import java.util.TreeSet;
 public class CatalogoCorsi {
 
 	private static CatalogoCorsi istanza = null;
@@ -17,7 +17,7 @@ public class CatalogoCorsi {
 	//Traduzione: CatalogoCorsi è un Singleton e come tale può essere solo uno, e creato chiamando getIstanza nel main per evitare casino
 
 	/*@OneToMany(mappedBy = "CatalogoCorsi")
-	private SortedSet<Corso> catalogoCorsi = new SortedSet<Corso>(){
+	private SortedSet<Corso> catalogoCorsi = new TreeSet<Corso>(){
 		@Override
 		public int size() {
 			return 0;
