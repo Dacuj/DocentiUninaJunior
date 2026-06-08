@@ -2,8 +2,9 @@ package entity;
 import entity.*;
 import jakarta.persistence.Id;
 
-public class Utente {
-
+public abstract class Utente implements Comparator<Utente>{
+	//non so se implementare Comparator qui e sfruttare l'ereditarietà, o implementarlo in docente e studente
+	//anyway, compara nome, cognome e ruolo, da decidere in che ordine
 	@Id
 	private int mail;
 
