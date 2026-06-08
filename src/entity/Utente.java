@@ -1,5 +1,4 @@
 package entity;
-import entity.*;
 import jakarta.persistence.Id;
 
 public abstract class Utente implements Comparator<Utente>{

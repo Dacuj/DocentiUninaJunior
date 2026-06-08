@@ -1,5 +1,5 @@
 package entity;
-import entity.*;
+
 public class SistemaNotifiche {
 
 	public void sendNotifica() {

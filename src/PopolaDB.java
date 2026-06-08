@@ -1,4 +1,3 @@
-package it.unina;
 import entity.*;
 public class PopolaDB {//classe per riempire il DB
 

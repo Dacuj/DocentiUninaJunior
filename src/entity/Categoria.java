@@ -1,5 +1,5 @@
 package entity;
-import entity.*;
+
 public enum Categoria {
 	SLIDE,
 	ESERCIZI,

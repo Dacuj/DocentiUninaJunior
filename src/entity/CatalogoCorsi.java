@@ -1,12 +1,6 @@
 package entity;
-import entity.*;
 import jakarta.persistence.OneToMany;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.SortedSet;
-import java.util.TreeSet;
 public class CatalogoCorsi {
 
 	private static CatalogoCorsi istanza = null;

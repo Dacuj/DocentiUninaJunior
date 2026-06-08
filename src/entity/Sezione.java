@@ -1,5 +1,4 @@
 package entity;
-import entity.*;
 import jakarta.persistence.*;
 
 import java.util.Collection;
