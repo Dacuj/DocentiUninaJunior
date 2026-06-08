@@ -126,6 +126,7 @@ public class Sezione {
 		}
 	};
 
+	//NOTA:Sezione è contenuta strettamente in Corso. Modificare di conseguenza
 	public Sezione(){};
 	public Sezione(String titolo){
 		this.titolo = titolo;
