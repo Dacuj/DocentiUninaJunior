@@ -86,7 +86,9 @@ public class Corso {
 	//SortedSet è una estensione di set che inserisce automaticamente gli elementi in ordine ascendente
 	//SortedSet è una interfaccia, non permette di istanziare direttamente oggetti
 	//TreeSet è una specializzazione di SortedSet che non permette nemmeno oggetti null
+	//TreeSet pretende che le classi in esso contenute implementino Comparable o Comparator a seconda delle esigenze (a noi serve Comparator)
 	//IntelliJ ha inserito automaticamente tutti gli override per i metodi di questa interfaccia, eliminare se e dove necessario
+	//https://www.geeksforgeeks.org/java/treeset-in-java-with-examples/ per istruzioni sui metodi dell'interfaccia
 
 	@OneToMany(mappedBy = "SEZIONI_CORSO")
 	private SortedSet<Sezione> listaSezioni = new TreeSet<Sezione>() {
