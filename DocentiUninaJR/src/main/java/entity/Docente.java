@@ -124,7 +124,7 @@ public class Docente extends Utente {
 		// TODO - implement Docente.CreaSez
 		throw new UnsupportedOperationException();
 	}	
-	//CreaSez è overloaded per permettere la creazione di sezioni principali (se non si fornisce la supersezione) o sottosezioni
+	//Potrebbe non essere necessario l'overload qui dato che già è stato fatto sui costruttori di Sezione
 
 	
 	public void IscriviStud() {
